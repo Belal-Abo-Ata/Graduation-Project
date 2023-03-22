@@ -9,5 +9,3 @@ toggleNavBtn.addEventListener(`click`, () => {
 closeNavBtn.addEventListener(`click`, () => {
   navbar.classList.remove(`left-0`);
 });
-
-console.log(closeNavBtn);

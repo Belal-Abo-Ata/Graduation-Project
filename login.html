@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wasteless Drugs</title>
+    <title>Login</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +24,8 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <!-- JavaScript -->
     <script src="./js/app.js" defer></script>
+    <!-- Validation -->
+    <script src="./js/sigin.js" defer></script>
   </head>
   <body class="font-roboto">
     <header>
@@ -136,7 +138,7 @@
                 </div>
                 <a
                   class="bg-primary-300 rounded-full text-white sm:text-lg md:text-xs lg:text-lg px-4 py-2 hover:bg-primary-400 shadow-lg hover:shadow-xl hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300"
-                  href="login.html"
+                  href="#"
                   >Login/Register</a
                 >
               </div>
@@ -145,7 +147,60 @@
         </div>
       </nav>
     </header>
-    <main class="min-h-[calc(100vh-320px)]"></main>
+    <main class="min-h-[calc(100vh-320px)]">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row md:justify-between items-center">
+          <div class="image md:max-w-md">
+            <img src="./assest/login.jpg" alt="" />
+          </div>
+          <form class="p-8 w-full max-w-xl" data-form action="#">
+            <div
+              class="bg-red-300 text-white px-4 py-2 text-sm hidden"
+              data-user-valid>
+              Email or password doesn't match
+            </div>
+            <h2 class="text-3xl mb-4 capitalize">Sign in</h2>
+            <div class="form__control mb-4">
+              <label class="block mb-2 text-lg" for="email">Email</label>
+              <input
+                class="w-full border border-gray-300 focus:outline-none px-2"
+                type="email"
+                name=""
+                id="email"
+                data-email />
+              <p class="text-xs text-red-500 font-medium mt-2"></p>
+            </div>
+            <div class="form__control mb-4">
+              <label class="block mb-2 text-lg" for="password">Password</label>
+              <input
+                class="w-full border border-gray-300 focus:outline-none px-2"
+                type="password"
+                name=""
+                id="password"
+                data-password />
+              <p class="text-xs text-red-500 font-medium mt-2"></p>
+            </div>
+            <a
+              href="forget-password.html"
+              class="text-sm text-blue-500 font-medium mt-2 capitalize hover:text-blue-700 transition-all duration-300"
+              >Forget Password?</a
+            >
+            <button
+              class="w-full bg-gradient-to-r from-primary-400 to-primary-600 py-2 text-white font-medium shadow-lg hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 my-4"
+              type="submit">
+              Sign in
+            </button>
+            <p class="capitalize text-sm">
+              Don't have an account?<a
+                href="#"
+                class="text-sm text-blue-500 font-medium mt-2 capitalize hover:text-blue-700 transition-all duration-300 ml-1"
+                >Sign Up</a
+              >
+            </p>
+          </form>
+        </div>
+      </div>
+    </main>
     <footer
       class="bg-primary-500 min-h-[160px] flex justify-center items-center">
       <div
