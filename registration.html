@@ -27,26 +27,39 @@
     <script src="./js/app.js" defer></script>
   </head>
   <body class="font-roboto">
+    <!-- Start Header -->
     <header>
+      <!-- Start Nav -->
       <nav>
+        <!-- Start First Nav -->
         <div
           class="first-nav w-full h-auto py-4 md:h-14 bg-black flex items-center">
+          <!-- Start First Nav Container -->
           <div
             class="container mx-auto px-4 md:p-0 flex flex-col md:flex-row gap-4 md:gap-0 justify-between items-center">
+            <!-- Start Social Media Icons -->
             <div class="socila-media flex gap-4">
+              <!-- Start Icon -->
               <a href="#">
                 <i
                   class="fa-brands fa-linkedin text-white text-2xl hover:-translate-y-1 hover:text-primary-500 transition-all duration-300"></i>
               </a>
+              <!-- End Icon -->
+              <!-- Start Icon -->
               <a href="#">
                 <i
                   class="fa-brands fa-square-twitter text-white text-2xl hover:-translate-y-1 hover:text-primary-500 transition-all duration-300"></i>
               </a>
+              <!-- End Icon -->
+              <!-- Start Icon -->
               <a href="#">
                 <i
                   class="fa-brands fa-square-facebook text-white text-2xl hover:-translate-y-1 hover:text-primary-500 transition-all duration-300"></i>
               </a>
+              <!-- End Icon -->
             </div>
+            <!-- End Social Media Icons -->
+            <!-- Start Search Form -->
             <form class="" action="#">
               <div
                 class="search w-80 md:w-96 h-8 text-white px-4 py-1 border rounded-full flex items-center relative">
@@ -65,22 +78,32 @@
                 </button>
               </div>
             </form>
+            <!-- End Search Form -->
           </div>
+          <!-- End First Nav Container -->
         </div>
+        <!-- End First Nav -->
+        <!-- Start Second Nav -->
         <div class="second-nav w-full h-20 bg-primary-500 flex items-center">
+          <!-- Start Second Nav Container -->
           <div
             class="container mx-auto px-4 md:p-0 flex justify-between items-center">
+            <!-- Start Logo -->
             <a href="index.html">
               <div
                 class="logo capitalize text-white font-black text-lg md:text-2xl lg:text-3xl">
                 Wasteless Drugs
               </div>
             </a>
+            <!-- End Logo -->
+            <!-- Start Burger Icon For Mobile Media -->
             <button
               class="burger-icon md:hidden text-white text-2xl cursor-pointer hover:-translate-y-1 hover:-translate-x-1 tranistion-all duration-300"
               data-toggle-nav>
               <i class="fa-solid fa-bars"></i>
             </button>
+            <!-- End Burger Icon For Mobile Media -->
+            <!-- Start Navigation Bar Div -->
             <div
               class="fixed top-0 -left-full bg-primary-500 shadow-lg px-4 py-8 min-h-screen w-[200px] flex flex-col md:flex-row gap-8 items-center md:static md:min-h-0 md:bg-transparent md:p-0 md:w-auto md:shadow-none transition-all duration-300"
               data-navbar>
@@ -127,50 +150,61 @@
                   >
                 </li>
               </ul>
+              <!-- Start User Info & Signin  -->
               <div
                 class="user flex flex-col md:flex-row gap-4 items-center my-4 md:m-0 order-first md:order-none">
+                <!-- Start User Image -->
                 <div
                   class="image w-12 md:w-10 lg:w-12 aspect-square overflow-hidden border-2 rounded-full">
                   <a href="#">
                     <img src="./assest/team-01.png" alt="" />
                   </a>
                 </div>
+                <!-- End User Image -->
+                <!-- Start Login Register -->
                 <a
                   class="bg-primary-300 rounded-full text-white sm:text-lg md:text-xs lg:text-lg px-4 py-2 hover:bg-primary-400 shadow-lg hover:shadow-xl hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300"
                   href="login.html"
                   >Login/Register</a
                 >
+                <!-- End Login Register -->
               </div>
+              <!-- End User Info & Signin  -->
             </div>
+            <!-- End Navigation Bar Div -->
+            <!-- End Navigation Bar Div -->
           </div>
+          <!-- End Second Nav Container -->
         </div>
+        <!-- End Second Nav -->
       </nav>
+      <!-- End Nav -->
     </header>
+    <!-- End Header -->
+    <!-- Start Main -->
     <main class="min-h-[calc(100vh-320px)]">
+      <!-- Start Main Container -->
       <div class="container mx-auto">
         <div class="flex flex-col md:flex-row md:justify-between items-center">
+          <!-- Start Image -->
           <div class="image md:max-w-md">
             <img src="./assest/login.jpg" alt="" />
           </div>
+          <!-- End Image -->
+          <!-- Start Form -->
           <form class="p-8 w-full max-w-xl" data-form action="#">
+            <!-- Start Validation Message -->
             <div
               class="bg-red-300 text-white px-4 py-2 text-sm hidden"
               data-user-valid>
               Email or password doesn't match
             </div>
+            <!-- End Validation Message -->
             <h2 class="text-3xl mb-4 capitalize">Sign Up</h2>
-            <div class="flex justify-between text-base lg:text-base mb-4">
-              <p
-                class="py-2 border-b border-b-gray-500 cursor-pointer w-1/2 text-center mr-4 rounded hover:bg-primary-300 hover:border-primary-500 transition-all duration-500">
-                Personal Info
-              </p>
-              <p
-                class="py-2 border-b border-b-gray-500 cursor-pointer w-1/2 text-center rounded hover:bg-primary-300 hover:border-primary-500 transition-all duration-500">
-                Pharmacy Info
-              </p>
-            </div>
+            <!-- Start Forms -->
             <div
-              class="form--controls flex max-w-xl relative h-96 space-x-4 overflow-hidden">
+              class="form--controls flex max-w-xl relative h-96 overflow-hidden">
+              <!-- Start First Forms -->
               <div
                 class="form w-full absolute left-0 transition-all duration-300"
                 data-first-form>
@@ -181,7 +215,7 @@
                     type="text"
                     name=""
                     id="name"
-                    data-email />
+                    data-name />
                   <p class="text-xs text-red-500 font-medium mt-2"></p>
                 </div>
                 <div class="form__control mb-4">
@@ -222,16 +256,11 @@
                   data-first-form-btn
                   class="w-full bg-gradient-to-r from-primary-400 to-primary-600 py-2 text-white font-medium shadow-lg hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 my-4"
                   type="submit">
-                  Sign Up
+                  Next
                 </button>
-                <p class="capitalize text-sm">
-                  Already Have an account?<a
-                    href="login.html"
-                    class="text-sm text-blue-500 font-medium mt-2 capitalize hover:text-blue-700 transition-all duration-300 ml-1"
-                    >Sign in</a
-                  >
-                </p>
               </div>
+              <!-- End First Forms -->
+              <!-- Start Second Form -->
               <div
                 class="form w-full absolute left-full transition-all duration-300"
                 data-second-form>
@@ -287,29 +316,39 @@
                   type="submit">
                   Sign Up
                 </button>
-                <p class="capitalize text-sm">
-                  Already Have an account?<a
-                    href="login.html"
-                    class="text-sm text-blue-500 font-medium mt-2 capitalize hover:text-blue-700 transition-all duration-300 ml-1"
-                    >Sign in</a
-                  >
-                </p>
               </div>
+              <!-- End Second Form -->
             </div>
+            <!-- End Forms -->
+            <p class="capitalize text-sm">
+              Already Have an account?<a
+                href="login.html"
+                class="text-sm text-blue-500 font-medium mt-2 capitalize hover:text-blue-700 transition-all duration-300 ml-1"
+                >Sign in</a
+              >
+            </p>
           </form>
+          <!-- End Form -->
         </div>
       </div>
+      <!-- End Main Container -->
     </main>
+    <!-- End Main -->
+    <!-- Start Footer -->
     <footer
       class="bg-primary-500 min-h-[160px] flex justify-center items-center">
+      <!-- Start Footer Container -->
       <div
         class="container mx-auto px-4 py-4 md:p-0 grid gap-8 grid-cols-1 md:grid-cols-3 justify-center items-start">
-        <a class="self-center" href="#">
+        <!-- Start Logo -->
+        <a class="self-center" href="index.html">
           <div
             class="text-center md:text-left logo capitalize text-white font-black text-lg md:text-2xl lg:text-3xl">
             Wasteless Drugs
           </div>
         </a>
+        <!-- End Logo -->
+        <!-- Start Pages -->
         <div
           class="pages text-white text-center md:text-left py-4 max-w-sm mx-auto">
           <h4 class="text-2xl font-bold border-b pb-2">Pages</h4>
@@ -331,13 +370,6 @@
             <li>
               <a
                 class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
-                href="./contact-us.html"
-                >Contact Us</a
-              >
-            </li>
-            <li>
-              <a
-                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
                 href="#"
                 >My Wish List</a
               >
@@ -345,14 +377,23 @@
             <li>
               <a
                 class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
-                href="#"
+                href="./contact-us.html"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="about-us.html"
                 >About Us</a
               >
             </li>
           </ul>
         </div>
+        <!-- End Pages -->
+        <!-- Start Categories -->
         <div
-          class="community text-white text-center md:text-left py-4 max-w-sm mx-auto">
+          class="Categories text-white text-center md:text-left py-4 max-w-sm mx-auto">
           <h4 class="text-2xl font-bold border-b pb-2">Categories</h4>
           <ul class="my-2 space-y-4">
             <li>
@@ -385,8 +426,11 @@
             </li>
           </ul>
         </div>
+        <!-- End Categories -->
       </div>
+      <!-- End Footer Container -->
     </footer>
+    <!-- End Footer -->
     <!-- Font Awesome -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
