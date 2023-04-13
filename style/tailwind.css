@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply bg-gradient-to-r from-primary-400 to-primary-600 py-2 text-white font-medium shadow-lg hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 my-4;
+  }
+  .positions {
+    @apply -left-[100%] -left-[200%];
+  }
+  .modal {
+    @apply bg-slate-400 rounded-lg shadow-lg fixed z-20 left-0 top-0 w-[500px] aspect-square  translate-x-1/2 translate-y-1/2;
+  }
+
+  .modal-content {
+    @apply mx-auto p-4 w-4/5 aspect-square relative top-1/2 -translate-y-1/2 flex gap-4 flex-col;
+  }
+
+  .crop-container {
+    @apply relative w-full h-4/5;
+  }
+
+  #cropped-image {
+    @apply absolute top-0 left-0 w-full h-full object-cover;
+  }
+
+  .modal-buttons {
+    @apply h-1/5 flex gap-4 px-4;
+  }
+}

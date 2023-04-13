@@ -25,7 +25,7 @@
     <!-- JavaScript -->
     <script src="./js/app.js" defer></script>
     <!-- Validation -->
-    <script src="./js/sigin.js" defer></script>
+    <script src="./js/sigin.js" type="module" defer></script>
   </head>
   <body class="font-roboto">
     <!-- Start Header -->
@@ -196,9 +196,9 @@
           <form class="p-8 w-full max-w-xl" data-form action="#">
             <!-- Start Validation Message -->
             <div
-              class="bg-red-300 text-white px-4 py-2 text-sm hidden"
+              class="error bg-red-400 text-sm w-full text-white text-center mb-2 p-4 capitalize shadow-sm rounded"
               data-user-valid>
-              Email or password doesn't match
+              <p class="">The Email Or Password Doesn't Match</p>
             </div>
             <!-- End Validation Message -->
             <h2 class="text-3xl mb-4 capitalize">Sign in</h2>

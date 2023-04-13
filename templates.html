@@ -11,6 +11,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <style>
+      .profile-pic-container {
+        position: relative;
+        display: inline-block;
+        width: 150px;
+        height: 150px;
+      }
+
+      #profile-pic {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      #photo-upload {
+        display: none;
+      }
+
+      #upload-label {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 6px 12px;
+        background-color: #4caf50;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    </style>
+    <script>
+      function loadPhoto(event) {
+        var image = document.getElementById('profile-pic');
+        image.src = URL.createObjectURL(event.target.files[0]);
+      }
+    </script>
   </head>
   <body
     class="h-screen flex flex-col gap-8 justify-center items-center bg-orange-200">
@@ -26,5 +65,17 @@
       <p class="text-lg">This is an successful message</p>
     </div>
     <!-- End Successful-->
+    <div class="profile-pic-container">
+      <img
+        src="default-profile-pic.png"
+        alt="Profile Picture"
+        id="profile-pic" />
+      <input
+        type="file"
+        id="photo-upload"
+        accept="image/*"
+        onchange="loadPhoto(event)" />
+      <label for="photo-upload" id="upload-label">Upload Photo</label>
+    </div>
   </body>
 </html>

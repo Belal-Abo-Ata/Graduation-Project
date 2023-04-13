@@ -1,3 +1,6 @@
+// Import Validtion Functions
+import { emailValidate, passwordValidate } from './validtion.js';
+
 // Dummy Database
 const users = [
   { email: 'belal@gmail.com', password: '123' },
@@ -14,15 +17,19 @@ const userValid = document.querySelector(`[data-user-valid]`);
 
 form.addEventListener(`submit`, formValidate);
 
-email.addEventListener(`blur`, emailValidate);
+email.addEventListener(`blur`, e => {
+  emailValidate(e.target);
+});
 
-password.addEventListener(`blur`, passwordValidate);
+password.addEventListener(`blur`, e => {
+  passwordValidate(e.target);
+});
 
 // Functions
 
 function formValidate(e) {
-  const emailValid = emailValidate();
-  const passwordValid = passwordValidate();
+  const emailValid = emailValidate(email);
+  const passwordValid = passwordValidate(password);
   const formValid = emailValid && passwordValid;
   if (!formValid) {
     e.preventDefault();
@@ -30,34 +37,6 @@ function formValidate(e) {
     findUsers();
     e.preventDefault();
   }
-}
-
-function emailValidate() {
-  const value = email.value;
-  const regEx = (validRegex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-  const valid = regEx.test(value);
-  if (!valid) {
-    email.nextElementSibling.textContent = `Please enter a valid email`;
-    email.classList.add(`border-red-500`);
-  } else {
-    email.nextElementSibling.textContent = ``;
-    email.classList.remove(`border-red-500`);
-  }
-  return valid;
-}
-
-function passwordValidate() {
-  const value = password.value;
-  const valid = value.length === 0 ? false : true;
-  if (!valid) {
-    password.nextElementSibling.textContent = `Please enter a valid password`;
-    password.classList.add(`border-red-500`);
-  } else {
-    password.nextElementSibling.textContent = ``;
-    password.classList.remove(`border-red-500`);
-  }
-  return valid;
 }
 
 function findUsers() {
@@ -73,7 +52,7 @@ function findUsers() {
 }
 
 function removeErr() {
-  const time = setTimeout(() => {
+  setTimeout(() => {
     userValid.classList.add('hidden');
-  }, 10000);
+  }, 5000);
 }

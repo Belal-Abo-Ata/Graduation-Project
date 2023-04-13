@@ -1,3 +1,11 @@
+// Import Validtion Functions
+import {
+  nameValidate,
+  emailValidate,
+  phoneValidate,
+  messageValidate,
+} from './validtion.js';
+
 // Select Elements
 
 const form = document.querySelector(`[data-form]`);
@@ -12,79 +20,31 @@ const message = document.querySelector(`[data-message]`);
 
 form.addEventListener(`submit`, formValidate);
 
-// usrName.addEventListener(`blur`, nameValidate);
+usrName.addEventListener(`blur`, e => {
+  nameValidate(e.target);
+});
 
-// email.addEventListener(`blur`, emailValidate);
+email.addEventListener(`blur`, e => {
+  emailValidate(e.target);
+});
 
-// phone.addEventListener(`blur`, phoneValidate);
+phone.addEventListener(`blur`, e => {
+  phoneValidate(e.target);
+});
 
-// message.addEventListener(`blur`, messageValidate);
+message.addEventListener(`blur`, e => {
+  messageValidate(e.target);
+});
 
 // Functions
 
 function formValidate(e) {
-  const nameValid = nameValidate();
-  const emailValid = emailValidate();
-  const phoneValid = phoneValidate();
-  const messageValid = messageValidate();
+  const nameValid = nameValidate(usrName);
+  const emailValid = emailValidate(email);
+  const phoneValid = phoneValidate(phone);
+  const messageValid = messageValidate(message);
   const formValid = nameValid && emailValid && phoneValid && messageValid;
   if (!formValid) {
     e.preventDefault();
   }
-}
-
-function nameValidate() {
-  const value = usrName.value;
-  const valid = /[a-zA-Z]+/gi.test(value);
-  if (!valid) {
-    usrName.nextElementSibling.textContent = `Please enter a valid name`;
-    usrName.classList.add(`border-red-500`);
-  } else {
-    usrName.nextElementSibling.textContent = ``;
-    usrName.classList.remove(`border-red-500`);
-  }
-  return valid;
-}
-
-function emailValidate() {
-  const value = email.value;
-  const regEx = (validRegex =
-    /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/);
-  const valid = regEx.test(value);
-  if (!valid) {
-    email.nextElementSibling.textContent = `Please enter a valid email`;
-    email.classList.add(`border-red-500`);
-  } else {
-    email.nextElementSibling.textContent = ``;
-    email.classList.remove(`border-red-500`);
-  }
-  return valid;
-}
-
-function phoneValidate() {
-  const value = phone.value;
-  const regEx = (validRegex =
-    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/);
-  const valid = regEx.test(value);
-  if (!valid) {
-    phone.nextElementSibling.textContent = `Please enter a valid phone`;
-    phone.classList.add(`border-red-500`);
-  } else {
-    phone.nextElementSibling.textContent = ``;
-    phone.classList.remove(`border-red-500`);
-  }
-  return valid;
-}
-
-function messageValidate() {
-  const value = message.value;
-  const valid = value.length > 0;
-  if (!valid) {
-    message.nextElementSibling.textContent = `Please enter a valid message`;
-    message.classList.add(`border-red-500`);
-  } else {
-    message.nextElementSibling.textContent = ``;
-    message.classList.remove(`border-red-500`);
-  }
-  return valid;
 }
