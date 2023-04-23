@@ -1,0 +1,244 @@
+/* all product*/
+/* all product h1*/
+.allproduct {
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  margin: 25px auto 25px auto;
+}
+
+.content-products {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.content-products .prodfg {
+  display: flex;
+  position: relative;
+}
+
+.products-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-rows: auto;
+  grid-template-columns: 350px 350px 250px;
+  /* grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); */
+
+}
+
+.sidebar-filter {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-left: 10px;
+  width: 280px;
+  height: inherit;
+  border: 1px solid rgb(187, 182, 182);
+  padding-bottom: 70px;
+}
+.sidebar-filter h4 {
+  text-align: center;
+  color: #000;
+  margin-top: 80px;
+  font-style: normal;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.product_card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #ecf2f3;
+}
+
+.product_card .discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  background-color: red;
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  padding: 3px;
+  border-radius: 15px;
+  z-index: 1000;
+}
+.product_img {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  background-color: white;
+  box-shadow: #e9e3e3 -20px 20px 120px -30px;
+  border-top: 2px;
+  border-left: 3px;
+  width: 100%;
+  height: 200px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.product_img:hover {
+  opacity: 0.6;
+}
+
+.product_img img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-size: 12px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.icons {
+  color: rgb(49, 44, 44);
+  margin-right: 10px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description .description-title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 7px;
+}
+
+.description .test {
+  font-size: 12px;
+  text-align: left;
+  padding: 10px 20px 10px 20px;
+  min-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  width: 300px;
+}
+
+.description .readmore {
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 25px 10px 25px;
+  margin: 5px;
+  border-radius: 20px;
+}
+
+.viewmore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rbtn {
+  border: 1px solid #000;
+  background-color: #fff;
+  font-size: 12px;
+  display: flex;
+  align-self: center;
+  font-weight: 600;
+  padding: 10px 25px 10px 25px;
+  margin: 15px;
+  border-radius: 20px;
+  color: #0257a9;
+}
+.sidebar-filter .filter-label {
+  color: #000;
+  font-size: 27px;
+  margin-bottom: 15px;
+}
+.sidebar-filter .selct {
+  margin-left: 15px;
+  display: inline-block;
+  margin-left: 43px;
+  border: 1px solid none;
+  border-radius: 2 px;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.filteritem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  margin: 12px auto;
+}
+
+.filteritem .filter-label {
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.filteritem #category {
+  border-bottom: 1px solid #9ca3af;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 230px;
+  align-self: center;
+}
+
+.filteritem .fromto {
+  display: flex;
+  align-self: center;
+}
+
+.filteritem .fromto #category {
+  border-bottom: 1px solid #9ca3af;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100px;
+  align-self: center;
+  margin-right: 15px;
+}
+
+.filteritem .apply-filter p {
+  margin-left: 25px;
+}
+.filteritem .apply-filter {
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  color: #fff;
+  font-size: 12px;
+  text-align: left;
+  padding: 10px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: #0257a9;
+}
