@@ -1,29 +1,19 @@
 import firstFormValidate from './firstFormValidate.js';
 import secondFormValidate from './secondFormValidate.js';
+import thirdFormValidate from './photoResize.js';
+import forthFormValidate from './mutlipleFiles.js';
 
 // Selecting Elements
 
-const userImgInput = document.querySelector(`[data-profile-picture-input]`);
-const userImg = document.querySelector(`[data-profile-picture-img]`);
 const form = document.querySelector(`[data-form]`);
 const forms = document.querySelectorAll(`[data-forms] > div`);
 const formBtns = document.querySelectorAll(`[data-form-btns] > button`);
 
-// forms[0].style.translate = `-200% 0`;
-// forms[1].style.translate = `-200% 0`;
-// forms[2].style.translate = `-200% 0`;
-
-console.log(userImg, userImgInput);
-
 // Event Listeners
-
-form.addEventListener(`submit`, e => e.preventDefault());
 
 formBtns.forEach(btn => {
   btn.addEventListener(`click`, renderForms);
 });
-
-userImgInput.addEventListener(`change`, getUserImage);
 
 // Variables
 
@@ -46,24 +36,6 @@ function renderForms(e) {
   changeForms(e.target, index);
 }
 
-// function secondFormValidate() {
-//   console.log(`hi`);
-//   return true;
-// }
-
-function thirdFormValidate() {
-  return true;
-}
-
-function forthFormValidate() {
-  return true;
-}
-
-function getUserImage(e) {
-  const img = e.target.files[0];
-  userImg.src = URL.createObjectURL(img);
-}
-
 forms.forEach((form, formIndex) => {
   form.style.left = `${formIndex * 100}%`;
 });
@@ -81,6 +53,10 @@ function changeForms(btn, index) {
   } else {
     formNum++;
     validate && showForms(formNum);
+  }
+
+  if (index === forms.length - 1 && !validate) {
+    form.addEventListener(`submit`, e => e.preventDefault());
   }
 }
 

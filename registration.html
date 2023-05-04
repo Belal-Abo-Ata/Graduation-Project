@@ -20,14 +20,25 @@
       referrerpolicy="no-referrer" />
     <!-- Main Style -->
     <link rel="stylesheet" href="./style/style.css" />
+    <!-- Cropper CSS -->
+    <link rel="stylesheet" href="node_modules/cropperjs/dist/cropper.css" />
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <!-- JavaScript -->
+    <!-- Registration -->
     <script
       src="./js/Registration/registration.js"
       type="module"
       defer></script>
+    <!-- The Main File -->
     <script src="./js/app.js" type="module" defer></script>
+    <!-- Cropper Js -->
+    <script src="./js/Registration/photoResize.js" type="module" defer></script>
+    <!-- Multiple Files -->
+    <script
+      src="./js/Registration/mutlipleFiles.js"
+      type="module"
+      defer></script>
   </head>
   <body class="font-roboto">
     <!-- Start Header -->
@@ -346,7 +357,7 @@
                     >Profile Picture</label
                   >
                   <img
-                    class="w-24 aspect-square rounded-full"
+                    class="w-24 aspect-square rounded-full object-fit"
                     src="./assest/user.png"
                     alt=""
                     data-profile-picture-img />
@@ -356,37 +367,10 @@
                   <input
                     class="w-full px-2 appearance-none hidden"
                     type="file"
-                    name=""
                     id="image"
                     data-profile-picture-input />
                   <p class="text-xs text-red-500 font-medium mt-2"></p>
                 </div>
-                <!-- <div
-                  class="form__control mb-4 flex flex-col justify-center items-center">
-                  <label class="block mb-2 text-lg" for=""
-                    >Authentication</label
-                  >
-                  <img
-                    class="w-24 aspect-square rounded-full"
-                    src="./assest/user.png"
-                    alt=""
-                    data-auth-picture-img />
-                  <label class="btn block w-fit px-8 cursor-pointer" for="image"
-                    >Upload Photo</label
-                  >
-                  <input
-                    class="w-full px-2 appearance-none hidden"
-                    type="file"
-                    name=""
-                    id="image"
-                    data-auth-picture-input />
-                  <p class="text-xs text-gray-500 font-medium mt-2">
-                    Please upload one or more file to proof that you are a
-                    pharmacist or al leaste you work at the pharmacy field
-                  </p>
-                  <p class="text-xs text-red-500 font-medium mt-2"></p>
-                </div> -->
-                <!-- End Third Form -->
                 <div class="btns flex gap-4" data-form-btns>
                   <button
                     class="w-full bg-gradient-to-r from-primary-400 to-primary-600 py-2 text-white font-medium shadow-lg hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 my-4"
@@ -413,26 +397,31 @@
                     >Authentication</label
                   >
                   <img
-                    class="w-24 aspect-square rounded-full"
-                    src="./assest/user.png"
+                    class="w-24 aspect-square"
+                    src="./assest/documents.png"
                     alt=""
-                    data-auth-picture-img />
-                  <label class="btn block w-fit px-8 cursor-pointer" for="image"
-                    >Upload Photo</label
+                    data-auth-img />
+                  <label class="btn block w-fit px-8 cursor-pointer" for="auth"
+                    >Upload files</label
                   >
                   <input
                     class="w-full px-2 appearance-none hidden"
                     type="file"
+                    multiple
                     name=""
-                    id="image"
-                    data-auth-picture-input />
+                    id="auth"
+                    data-auth-input />
+                  <!-- Start Multiple File Container -->
+                  <div
+                    class="p-4 flex gap-4 overflow-x-auto"
+                    data-files-container></div>
+                  <!-- End Multiple File Container -->
+                  <p class="text-xs text-red-500 font-medium mt-2"></p>
                   <p class="text-xs text-gray-500 font-medium mt-2">
-                    Please upload one or more file to proof that you are a
+                    Please upload one or more photo to proof that you are a
                     pharmacist or al leaste you work at the pharmacy field
                   </p>
-                  <p class="text-xs text-red-500 font-medium mt-2"></p>
                 </div>
-                <!-- End Third Form -->
                 <div class="btns flex gap-4" data-form-btns>
                   <button
                     class="w-full bg-gradient-to-r from-primary-400 to-primary-600 py-2 text-white font-medium shadow-lg hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 my-4"
@@ -555,18 +544,17 @@
     </footer>
     <!-- End Footer -->
     <!-- Start Modal  -->
-    <!-- <div class="modal" id="crop-modal">
+    <div class="modal hidden" id="crop-modal">
       <div class="modal-content">
         <div class="crop-container">
           <img src="" alt="Cropped Image" id="cropped-image" />
-          <div class="crop-box"></div>
         </div>
         <div class="modal-buttons">
           <button class="btn w-full" id="crop-button">Crop</button>
           <button class="btn w-full" id="cancel-button">Cancel</button>
         </div>
       </div>
-    </div> -->
+    </div>
     <!-- End Modal -->
     <!-- Font Awesome -->
     <script
