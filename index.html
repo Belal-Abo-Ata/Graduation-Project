@@ -104,7 +104,7 @@
             <!-- End Burger Icon For Mobile Media -->
             <!-- Start Navigation Bar Div -->
             <div
-              class="fixed top-0 -left-full bg-primary-500 shadow-lg px-4 py-8 min-h-screen w-[200px] flex flex-col md:flex-row gap-8 items-center md:static md:min-h-0 md:bg-transparent md:p-0 md:w-auto md:shadow-none transition-all duration-300"
+              class="fixed top-0 -left-full bg-primary-500 shadow-lg px-4 py-8 min-h-screen w-[200px] flex flex-col md:flex-row gap-4 items-center md:static md:min-h-0 md:bg-transparent md:p-0 md:w-auto md:shadow-none transition-all duration-300"
               data-navbar>
               <button
                 class="close-btn md:hidden absolute right-0 top-0 cursor-pointer"
@@ -151,13 +151,36 @@
               </ul>
               <!-- Start User Info & Signin  -->
               <div
-                class="user flex flex-col md:flex-row gap-4 items-center my-4 md:m-0 order-first md:order-none">
+                class="user flex flex-col md:flex-row gap-2 items-center my-4 md:m-0 order-first md:order-none">
                 <!-- Start User Image -->
-                <div
-                  class="image w-12 md:w-10 lg:w-12 aspect-square overflow-hidden border-2 rounded-full">
-                  <a href="#">
-                    <img src="./assest/team-01.png" alt="" />
-                  </a>
+                <div class="relative flex items-center gap-2 cursor-pointer">
+                  <div
+                    class="relative w-12 md:w-10 lg:w-12 aspect-square overflow-hidden border-2 rounded-full">
+                    <a href="#">
+                      <img src="./assest/team-01.png" alt="" />
+                    </a>
+                  </div>
+                  <i class="fa-solid fa-caret-down text-white"></i>
+                  <div
+                    class="w-44 absolute -bottom-8 bg-gray-500 text-white p-4 translate-y-full">
+                    <div class="flex gap-4 items-center">
+                      <div
+                        class="relative w-12 md:w-10 lg:w-12 aspect-square overflow-hidden border-2 rounded-full">
+                        <a href="#">
+                          <img src="./assest/team-01.png" alt="" />
+                        </a>
+                      </div>
+                      <div class="text-sm">
+                        <p>User Name</p>
+                        <button
+                          class="bg-blue-500 px-2 py-1 mt-2 text-sm"
+                          type="button">
+                          Edit Profile
+                        </button>
+                      </div>
+                    </div>
+                    <p>logout</p>
+                  </div>
                 </div>
                 <!-- End User Image -->
                 <!-- Start Login Register -->
