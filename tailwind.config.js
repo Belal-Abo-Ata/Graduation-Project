@@ -22,6 +22,9 @@ module.exports = {
         cairo: ['Cairo', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
       },
+      transitionProperty: {
+        'max-h': 'max-height',
+      },
     },
   },
   plugins: [],
