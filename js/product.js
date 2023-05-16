@@ -3,11 +3,15 @@
 const imgs = document.querySelectorAll(`[data-product-imgs] img`);
 const leftBtns = document.querySelector(`[data-btn-left]`);
 const rightBtns = document.querySelector(`[data-btn-right]`);
+const miniImgsContainer = document.querySelector(`[data-mini-imgs]`);
+const miniBorder = document.querySelector(`[data-mini-img-border]`);
 let imgIndex = 0;
 
-console.log(imgs, leftBtns, rightBtns);
+console.log(miniImgsContainer, miniBorder);
 
 // Event Listeners
+
+document.addEventListener(`load`, insertMiniImgs());
 
 imgs.forEach((img, index) => {
   img.style.left = `${index * 100}%`;
@@ -36,6 +40,31 @@ function displayImgs() {
   imgs.forEach((img, index) => {
     img.style.translate = `-${imgIndex * 100}% 0`;
   });
+
+  miniBorder.style.translate = `${imgIndex * 100}% 0`;
 }
 
 displayImgs();
+
+function insertMiniImgs() {
+  miniBorder.style.display = 'none';
+  imgs.forEach(img => {
+    miniImgsContainer.insertAdjacentHTML(
+      `beforeend`,
+      `<img
+                class="object-contain w-24 transition-all duration-300 cursor-pointer p-4"
+                src="${img.src}"
+                alt="mini-img" />`
+    );
+  });
+  miniBorder.style.display = 'block';
+  const miniImgs = miniImgsContainer.querySelectorAll(`img`);
+  miniImgs.forEach((img, index) => {
+    img.addEventListener(`click`, () => {
+      imgIndex = index;
+      displayImgs();
+      // miniBorder.style.translate = `${index * 100}% 0`;
+      miniBorder.style.translate = `${imgIndex * 100}% 0`;
+    });
+  });
+}
