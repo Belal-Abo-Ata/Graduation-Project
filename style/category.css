@@ -99,9 +99,9 @@
   transition: 0.3s;
 }
 
-.product_img:hover {
+/* .product_img:hover {
   opacity: 0.6;
-}
+} */
 
 .product_img img {
   width: 100%;
@@ -147,10 +147,10 @@
   font-size: 12px;
   text-align: left;
   padding: 10px 20px 10px 20px;
-  min-width: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  /* min-width: 100px; */
+  /* white-space: nowrap; */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
   display: block;
   width: 300px;
 }
