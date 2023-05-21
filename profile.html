@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>product name</title>
+    <title>Profile</title>
 
+    <link rel="stylesheet" href="style/framework.css" />
+    <link rel="stylesheet" href="style/master.css" />
+    <link rel="stylesheet" href="style/all.min.css" />
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,10 +29,9 @@
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <!-- JavaScript -->
     <script src="./js/app.js" defer></script>
-    <script src="./js/product.js" defer></script>
+    <script src="./js/profile.js" defer></script>
   </head>
-
-  <body class="font-roboto">
+  <body>
     <!-- Start Header -->
     <header>
       <!-- Start Nav -->
@@ -87,21 +89,21 @@
         </div>
         <!-- End First Nav -->
         <!-- Start Second Nav -->
-        <div class="flex items-center w-full h-20 second-nav bg-primary-500">
+        <div class="flex items-center w-full h-24 second-nav bg-primary-500">
           <!-- Start Second Nav Container -->
           <div
-            class="container flex items-center justify-between px-4 mx-auto md:p-0">
+            class="container flex items-center justify-between md:justify-center gap-[8vw] px-4 mx-auto md:p-0">
             <!-- Start Logo -->
             <a href="index.html">
               <div
                 class="text-lg font-black text-white capitalize logo md:text-2xl lg:text-3xl">
-                <img class="w-36" src="./assest/logo.png" alt="" />
+                <img class="w-44" src="./assest/logo.png" alt="" />
               </div>
             </a>
             <!-- End Logo -->
             <!-- Start Navigation Bar Div -->
             <div
-              class="fixed top-0 -left-full bg-primary-500 shadow-lg px-4 py-8 min-h-screen w-[200px] flex flex-col md:flex-row gap-4 items-center md:static md:min-h-0 md:bg-transparent md:p-0 md:w-auto md:shadow-none transition-all duration-300"
+              class="fixed top-0 -left-full bg-primary-500 shadow-lg px-4 py-8 min-h-screen w-[200px] flex flex-col md:flex-row gap-4 items-center md:static md:min-h-0 md:bg-transparent md:p-0 md:w-auto md:shadow-none transition-all duration-300 z-20"
               data-navbar>
               <button
                 class="absolute top-0 right-0 cursor-pointer close-btn md:hidden"
@@ -151,7 +153,7 @@
             <!-- Start User Info & Signin  -->
             <div class="flex items-center gap-4 my-4 user md:flex-row md:m-0">
               <!-- Start User Image -->
-              <div class="relative flex flex-col items-center gap-2">
+              <div class="relative z-50 flex flex-col items-center gap-2">
                 <div
                   class="flex items-center gap-2 cursor-pointer"
                   data-toggle-user-info>
@@ -165,7 +167,7 @@
                 </div>
                 <!-- End Login Register -->
                 <div
-                  class="absolute left-0 overflow-hidden transition-all duration-700 translate-y-full bg-white border-gray-400 rounded shadow-lg max-h-0 -bottom-6 -translate-x-2/3 w-44 before:border-8 before:border-transparent before:border-b-blue-500 before:absolute before:-top-px before:right-0 before:-translate-y-full before:w-0 before:h-0 before:shadow-lg before:z-20"
+                  class="absolute left-0 overflow-hidden transition-all duration-700 translate-y-[calc(100%+0.5rem)] bg-white border-gray-400 rounded shadow-lg max-h-0 -bottom-6 -translate-x-2/3 w-44 before:border-8 before:border-transparent before:border-b-blue-500 before:absolute before:-top-px before:right-0 before:-translate-y-full before:w-0 before:h-0 before:shadow-lg before:z-20"
                   data-user-info>
                   <div class="flex items-center justify-center gap-4 px-2 py-4">
                     <div
@@ -193,7 +195,7 @@
                 class="hidden px-4 py-2 text-white transition-all duration-300 rounded-full shadow-lg md:block bg-primary-300 sm:text-lg md:text-xs lg:text-lg hover:bg-primary-400 hover:shadow-xl hover:-translate-x-1 hover:-translate-y-1"
                 href="login.html"
                 >Login</a
-              > -->
+            > -->
               <!-- End User Info & Signin  -->
               <!-- Start Burger Icon For Mobile Media -->
               <button
@@ -213,121 +215,128 @@
       <!-- End Nav -->
     </header>
     <!-- End Header -->
-    <!-- Start Main -->
-    <main class="min-h-[calc(100vh-320px)] py-12 md:p-0">
-      <!-- Start Main Container -->
-      <div class="container mx-auto max-w-[1200px]">
-        <div
-          class="flex flex-col items-center gap-8 md:flex-row md:justify-between">
-          <div class="w-full">
-            <!-- Start Image -->
-            <div
-              class="w-full h-[500px] relative flex gap-12 justify-center items-center">
-              <div class="h-full transition-all duration-700">
-                <button
-                  class="absolute p-4 -translate-y-1/2 bg-white rounded shadow-md top-1/2 left-5"
-                  type="button"
-                  data-btn-left>
-                  <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button
-                  class="absolute p-4 -translate-y-1/2 bg-white rounded shadow-md top-1/2 right-5"
-                  type="button"
-                  data-btn-right>
-                  <i class="fa-solid fa-chevron-right"></i>
-                </button>
-              </div>
-              <div
-                class="relative flex items-center w-full h-full overflow-hidden transition-all -z-10 md:max-w-md"
-                data-product-imgs>
-                <img
-                  class="absolute object-contain w-full max-w-lg transition-all duration-300 h-96"
-                  src="./assest/drug.png"
-                  alt="" />
-                <img
-                  class="absolute object-contain w-full transition-all duration-300 h-96"
-                  src="./assest/cataflam.png"
-                  alt="" />
-                <img
-                  class="absolute object-contain w-full transition-all duration-300 h-96"
-                  src="./assest/cold and flow.jpg"
-                  alt="" />
-              </div>
-            </div>
-            <!-- End Image -->
-            <!-- Start Mini Image -->
-            <div
-              class="relative flex justify-start max-w-sm mx-auto overflow-x-auto w-fit"
-              data-mini-imgs>
-              <div
-                class="absolute left-0 w-24 h-full transition-all duration-300 border select-none -z-10 border-primary-500"
-                data-mini-img-border></div>
-            </div>
-            <!-- End Mini Image -->
-          </div>
-          <!-- Start Info -->
-          <div class="w-full max-w-xl p-8" action="#">
-            <h2
-              class="p-4 mb-4 text-3xl font-bold text-center text-white rounded-md gradient">
-              product-name
-            </h2>
-            <!-- Start Form Control -->
-            <div class="mb-1 border-b border-gray-500">
-              <p class="py-2 text-lg font-bold capitalize" for="name">
-                pharmacy Name
-              </p>
-              <div class="w-full px-2 py-4 capitalize">
-                <p>Name Pharmacy</p>
-              </div>
-            </div>
 
-            <div class="mb-1 border-b border-gray-500">
-              <p class="py-2 text-lg font-bold capitalize" for="name">
-                address
-              </p>
-              <div class="w-full px-2 py-4 capitalize">
-                <p>Pharmacy Address</p>
+    <!-- sidebar -->
+    <main class="min-h-[calc(100vh-320px)]">
+      <div class="flex gap-8 p-4 page md:p-0">
+        <div class="sidebar p-relative">
+          <h3 class="mt-0 p-relative txt-c animate-ping-once">Mohamed Hany</h3>
+          <ul>
+            <li>
+              <a
+                class="active align-center c-black d-flex fs-14 rad-6"
+                href="profile.html">
+                <i class="fa-solid fa-user"></i>
+                <span>Profile</span>
+              </a>
+            </li>
+            <li>
+              <a
+                class="p-10 active align-center c-black d-flex fs-14 rad-6"
+                href="Wish List.html">
+                <i class="fa-regular fa-pen-to-square"></i>
+                <span>Post</span>
+              </a>
+            </li>
+            <!-- <li>
+              <a
+                class="p-10 active align-center c-black d-flex fs-14 rad-6"
+                href="dashboard.html">
+                <i class="fa-solid fa-heart"></i>
+                <span>My Favourite</span>
+              </a>
+            </li> -->
+            <li>
+              <a
+                class="p-10 active align-center c-black d-flex fs-14 rad-6"
+                href="Wish List.html">
+                <i class="fa-solid fa-newspaper"></i>
+                <span>Wish List</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <!-- start of Profile -->
+          <div class="ml-4 profile-page">
+            <div class="bg-white overview rad-10 d-flex align-center">
+              <div class="avatar-box txt-c">
+                <img
+                  class="mb-10 rad-half"
+                  src="New folder (3)/20220112_091553.jpg"
+                  alt="" />
+                <h3 class="m-0">Mohamed Hany</h3>
+                <!-- <p class="mt-10 c-grey">level 21</p> -->
+                <!-- <div class="level rad-6 p-relative bg-eee">
+                  <span class="w-70"></span>
+                </div> -->
+                <!-- <div class="mt-10 mb-10 rating">
+                  <i class="fa-solid fa-star c-red fs-12"></i>
+                  <i class="fa-solid fa-star c-red fs-12"></i>
+                  <i class="fa-solid fa-star c-red fs-12"></i>
+                  <i class="fa-solid fa-star c-red fs-12"></i>
+                  <i class="fa-solid fa-star c-red fs-12"></i>
+                </div> -->
+                <!-- <p class="m-0 c-grey fs-13">250 Rating</p> -->
               </div>
-            </div>
-            <div class="mb-1 border-b border-gray-500">
-              <p class="py-2 text-lg font-bold capitalize" for="name">
-                Telephone
-              </p>
-              <div class="w-full px-2 py-4 capitalize">
-                <p>Telephone</p>
-              </div>
-            </div>
-
-            <div class="flex flex-row items-center gap-4 my-8 text-center">
-              <div class="w-1/2 p-4 rounded-lg shadow-sm gradient">
-                <div class="text-lg font-bold text-white">Discount</div>
-                <div
-                  class="px-4 py-2 mx-auto font-bold text-white rounded w-fit">
-                  25 %
+              <form action="" data-form>
+                <div class="mt-8 info-box md:mt-0 md:ml-8" data-user-box-info>
+                  <div class="mb-8 md:p-5 box d-flex align-center">
+                    <h4 class="w-full m-0 c-grey fs-15">General Information</h4>
+                    <div class="fs-14">
+                      <span class="c-grey">Full Name:</span>
+                      <span data-type="text">Mohamed Hany</span>
+                    </div>
+                    <div class="fs-14">
+                      <span class="c-grey">Gender:</span>
+                      <span data-type="select-gender">Male</span>
+                    </div>
+                  </div>
+                  <div class="mb-8 md:p-5 box d-flex align-center">
+                    <h4 class="w-full m-0 c-grey fs-15">
+                      Personal Information
+                    </h4>
+                    <div class="fs-14">
+                      <span class="c-grey">Email:</span>
+                      <span data-type="email">Mohamed Hany@gmail.com</span>
+                    </div>
+                    <div class="fs-14">
+                      <span class="c-grey">Phone:</span>
+                      <span data-type="text">01285421695</span>
+                    </div>
+                    <div class="fs-14">
+                      <span class="c-grey">Date Of Birth:</span>
+                      <span data-type="date">14/8/2001</span>
+                    </div>
+                  </div>
+                  <div class="mb-8 md:p-5 box d-flex align-center">
+                    <h4 class="w-full m-0 c-grey fs-15">Job Information</h4>
+                    <div class="fs-14">
+                      <span class="c-grey">Job</span>
+                      <span data-type="text">Pharmacist</span>
+                    </div>
+                    <div class="fs-14">
+                      <span class="c-grey">Pharmacy Title</span>
+                      <span data-type="text">25 ali ahmed street</span>
+                    </div>
+                    <div class="fs-14">
+                      <span class="c-grey">Years Of Experience:</span>
+                      <span data-type="text">5 years</span>
+                    </div>
+                  </div>
+                  <button
+                    class="block px-4 py-2 ml-auto mr-8 cursor-pointer btn w-fit"
+                    type="submit"
+                    data-edit-btn>
+                    Edit
+                  </button>
                 </div>
-              </div>
-              <div class="w-1/2 p-4 rounded-lg shadow-sm gradient">
-                <div class="text-lg font-bold text-white">Quantity</div>
-                <div
-                  class="px-4 py-2 mx-auto font-bold text-white rounded w-fit">
-                  60 piece
-                </div>
-              </div>
-            </div>
-            <div class="">
-              <button
-                class="w-full py-2 font-medium text-white capitalize transition-all duration-300 shadow-lg bg-gradient-to-r from-primary-400 to-primary-600 hover:-translate-x-1 hover:-translate-y-1"
-                type="submit">
-                add wish list
-              </button>
+              </form>
             </div>
           </div>
-          <!-- End Info -->
         </div>
       </div>
-      <!-- End Main Container -->
     </main>
-    <!-- End Main -->
     <!-- Start Footer -->
     <footer
       class="bg-primary-500 min-h-[160px] flex justify-center items-center">
@@ -338,7 +347,7 @@
         <a class="self-center justify-s" href="index.html">
           <div
             class="mx-auto text-lg font-black text-white capitalize logo md:text-2xl lg:text-3xl w-fit">
-            <img class="w-36" src="./assest/logo.png" alt="" />
+            <img class="w-44" src="./assest/logo.png" alt="" />
           </div>
         </a>
         <!-- End Logo -->
@@ -425,7 +434,6 @@
       <!-- End Footer Container -->
     </footer>
     <!-- End Footer -->
-
     <!-- Font Awesome -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"

@@ -25,6 +25,9 @@ module.exports = {
       transitionProperty: {
         'max-h': 'max-height',
       },
+      animation: {
+        'ping-once': 'ping 0.6s alternate',
+      },
     },
   },
   plugins: [],
