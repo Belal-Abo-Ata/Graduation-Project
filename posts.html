@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wasteless Drugs</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/category.css" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <!-- JavaScript -->
+    <script src="./js/app.js" defer></script>
+    <script src="./js/categories.js" defer></script>
+    <script src="./js/post.js" defer></script>
+  </head>
+  <body class="font-roboto">
+    <!-- Start Header -->
+    <header>
+      <!-- Start Nav -->
+      <nav>
+        <!-- Start First Nav -->
+        <div
+          class="flex items-center w-full h-auto py-4 bg-black first-nav md:h-14">
+          <!-- Start First Nav Container -->
+          <div
+            class="container flex flex-col items-center justify-between gap-4 px-4 mx-auto md:p-0 md:flex-row md:gap-0">
+            <!-- Start Social Media Icons -->
+            <div class="flex gap-4 socila-media">
+              <!-- Start Icon -->
+              <a href="#">
+                <i
+                  class="text-2xl text-white transition-all duration-300 fa-brands fa-linkedin hover:-translate-y-1 hover:text-primary-500"></i>
+              </a>
+              <!-- End Icon -->
+              <!-- Start Icon -->
+              <a href="#">
+                <i
+                  class="text-2xl text-white transition-all duration-300 fa-brands fa-square-twitter hover:-translate-y-1 hover:text-primary-500"></i>
+              </a>
+              <!-- End Icon -->
+              <!-- Start Icon -->
+              <a href="#">
+                <i
+                  class="text-2xl text-white transition-all duration-300 fa-brands fa-square-facebook hover:-translate-y-1 hover:text-primary-500"></i>
+              </a>
+              <!-- End Icon -->
+            </div>
+            <!-- End Social Media Icons -->
+            <!-- Start Search Form -->
+            <form class="" action="#">
+              <div
+                class="relative flex items-center h-8 px-4 py-1 text-white border rounded-full search w-80 md:w-96">
+                <input
+                  class="absolute w-full h-full text-center placeholder-white placeholder-opacity-0 -translate-x-1/2 bg-transparent md:placeholder-opacity-50 md:placeholder:text-xs left-1/3 focus:outline-none"
+                  placeholder="For Example Pandol"
+                  type="search"
+                  name=""
+                  id="" />
+                <i class="left-0 fa-solid fa-magnifying-glass absoulte"></i>
+                <button
+                  class="absolute top-0 px-4 py-1 bg-white rounded-full shadow-sm text-primary-500 -right-1"
+                  type="submit">
+                  Search
+                  <i class="ml-2 fa-solid fa-arrow-right-long"></i>
+                </button>
+              </div>
+            </form>
+            <!-- End Search Form -->
+          </div>
+          <!-- End First Nav Container -->
+        </div>
+        <!-- End First Nav -->
+        <!-- Start Second Nav -->
+        <div class="flex items-center w-full h-20 second-nav bg-primary-500">
+          <!-- Start Second Nav Container -->
+          <div
+            class="container flex items-center justify-between px-4 mx-auto md:p-0">
+            <!-- Start Logo -->
+            <a href="index.html">
+              <div
+                class="text-lg font-black text-white capitalize logo md:text-2xl lg:text-3xl">
+                Wasteless Drugs
+              </div>
+            </a>
+            <!-- End Logo -->
+            <!-- Start Burger Icon For Mobile Media -->
+            <button
+              class="text-2xl text-white duration-300 cursor-pointer burger-icon md:hidden hover:-translate-y-1 hover:-translate-x-1 tranistion-all"
+              data-toggle-nav>
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <!-- End Burger Icon For Mobile Media -->
+            <!-- Start Navigation Bar Div -->
+            <div
+              class="fixed top-0 -left-full bg-primary-500 shadow-lg px-4 py-8 min-h-screen w-[200px] flex flex-col md:flex-row gap-8 items-center md:static md:min-h-0 md:bg-transparent md:p-0 md:w-auto md:shadow-none transition-all duration-300"
+              data-navbar>
+              <button
+                class="absolute top-0 right-0 cursor-pointer close-btn md:hidden"
+                data-close-nav>
+                <i class="text-3xl text-white fa-solid fa-square-xmark"></i>
+              </button>
+              <ul
+                class="flex flex-col order-last gap-4 text-sm text-center text-white md:flex-row md:order-none lg:text-lg">
+                <li class="">
+                  <a
+                    class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#categories"
+                    class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                    >Categories</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#my-wish-list"
+                    class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                    >My Wish List</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./contact-us.html"
+                    class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="about-us.html"
+                    class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                    >About Us</a
+                  >
+                </li>
+              </ul>
+              <!-- Start User Info & Signin  -->
+              <div
+                class="flex flex-col items-center order-first gap-4 my-4 user md:flex-row md:m-0 md:order-none">
+                <!-- Start User Image -->
+                <div
+                  class="w-12 overflow-hidden border-2 rounded-full image md:w-10 lg:w-12 aspect-square">
+                  <a href="#">
+                    <img src="./assest/team-01.png" alt="" />
+                  </a>
+                </div>
+                <!-- End User Image -->
+                <!-- Start Login Register -->
+                <a
+                  class="px-4 py-2 text-white transition-all duration-300 rounded-full shadow-lg bg-primary-300 sm:text-lg md:text-xs lg:text-lg hover:bg-primary-400 hover:shadow-xl hover:-translate-x-1 hover:-translate-y-1"
+                  href="login.html"
+                  >Login/Register</a
+                >
+                <!-- End Login Register -->
+              </div>
+              <!-- End User Info & Signin  -->
+            </div>
+            <!-- End Navigation Bar Div -->
+            <!-- End Navigation Bar Div -->
+          </div>
+          <!-- End Second Nav Container -->
+        </div>
+        <!-- End Second Nav -->
+      </nav>
+      <!-- End Nav -->
+    </header>
+    <!-- End Header -->
+
+    <!-- all product -->
+    <main
+      class="min-h-[calc(100vh-320px)] overflow-hidden relative flex items-start">
+      <div class="sidebar-filter">
+        <h4 class="filter-label">Filter Events</h4>
+        <div class="filter">
+          <div class="filteritem">
+            <p class="filter-label">CATEGORY</p>
+            <select name="category" id="category">
+              <option value="1">Category 1</option>
+              <option value="2">Category 2</option>
+              <option value="3">Category 3</option>
+              <option value="4">Category 4</option>
+              <option value="5">Category 5</option>
+            </select>
+          </div>
+          <div class="filteritem">
+            <p class="filter-label">CATEGORY</p>
+            <select name="category" id="category">
+              <option value="1">Category 1</option>
+              <option value="2">Category 2</option>
+              <option value="3">Category 3</option>
+              <option value="4">Category 4</option>
+              <option value="5">Category 5</option>
+            </select>
+          </div>
+          <div class="filteritem">
+            <p class="filter-label">CATEGORY</p>
+            <div class="fromto">
+              <div>
+                <p class="filter-label">from</p>
+                <input type="date" id="category" />
+              </div>
+              <div>
+                <p class="filter-label">to</p>
+                <input type="date" id="category" />
+              </div>
+            </div>
+          </div>
+          <div class="filteritem">
+            <p class="filter-label">CATEGORY</p>
+            <select name="category" id="category">
+              <option value="1">Category 1</option>
+              <option value="2">Category 2</option>
+              <option value="3">Category 3</option>
+              <option value="4">Category 4</option>
+              <option value="5">Category 5</option>
+            </select>
+          </div>
+          <div class="filteritem">
+            <button class="apply-filter">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <p>Apply filter</p>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container mx-auto">
+        <h1 class="allproduct">Category</h1>
+        <div class="content-products">
+          <div class="prodfg">
+            <!-- Start all product -->
+            <div class="products-grid">
+              <div class="product_card">
+                <div class="product_img">
+                  <div class="discount">25%</div>
+                  <div
+                    class="absolute w-4 h-4 right-[10px] top-[10px] z-10 -translate-x-1/2 transition-all duration-700">
+                    <label class="transition-all duration-700 cursor-pointer">
+                      <i
+                        class="text-xl text-red-500 transition-all duration-700 fa-regular fa-heart"
+                        data-heart-icon></i>
+                      <input
+                        class="appearance-none"
+                        type="checkbox"
+                        name="heart"
+                        checked
+                        data-heart-input />
+                    </label>
+                  </div>
+                  <img class="cover" src="assest/drug.png" alt="product" />
+                </div>
+                <div class="info">
+                  <span> <i class="fa-solid fa-user icons"></i> Admin</span>
+                  <span>
+                    <i class="fa-regular fa-calendar-days icons"></i> 13/8</span
+                  >
+                  <span>
+                    <i class="fa-solid fa-comment icons"></i> Comments</span
+                  >
+                </div>
+                <div class="description page-content">
+                  <h4 class="description-title">Panadole</h4>
+                  <p class="test">
+                    Panadol Night tablets relieve night time pain helping you
+                    beat pain to sleep soundly. Painful conditions like
+                    headaches and musculoskeletal pain can affect the quality of
+                    your sleep, by making it difficult to sleep
+                  </p>
+                </div>
+              </div>
+
+              <div class="product_card">
+                <div class="product_img">
+                  <div class="discount">25%</div>
+                  <div class="absolute top-2 right-2 -translate-x-1/2">
+                    <button type="button" data-toggle-post-info>
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div
+                      class="absolute top-6 left-2 -translate-x-full flex flex-col gap-2 items-start bg-white shadow-lg w-28 max-h-0 overflow-hidden transition-all duration-300"
+                      data-post-info>
+                      <button
+                        class="space-x-2 hover:text-primary-500 transition-all duration-300">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <spans>Edit</spans>
+                      </button>
+                      <button
+                        class="space-x-2 hover:text-primary-500 transition-all duration-300">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>Delete</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute w-4 h-4 right-[10px] bottom-[10px] z-10 -translate-x-1/2">
+                    <label class="transition-all duration-700 cursor-pointer">
+                      <i
+                        class="text-xl text-red-500 transition-all duration-700 fa-regular fa-heart"
+                        data-heart-icon></i>
+                      <input
+                        class="appearance-none"
+                        type="checkbox"
+                        name="heart"
+                        checked
+                        data-heart-input />
+                    </label>
+                  </div>
+                  <img class="cover" src="assest/drug.png" alt="product" />
+                </div>
+                <div class="info">
+                  <span> <i class="fa-solid fa-user icons"></i> Admin</span>
+                  <span>
+                    <i class="fa-regular fa-calendar-days icons"></i> 13/8</span
+                  >
+                  <span>
+                    <i class="fa-solid fa-comment icons"></i> Comments</span
+                  >
+                </div>
+                <div class="description page-content">
+                  <h4 class="description-title">Panadole</h4>
+                  <p class="test">
+                    Panadol Night tablets relieve night time pain helping you
+                    beat pain to sleep soundly. Painful conditions like
+                    headaches and musculoskeletal pain can affect the quality of
+                    your sleep, by making it difficult to sleep
+                  </p>
+                </div>
+              </div>
+
+              <div class="product_card">
+                <div class="product_img">
+                  <div class="discount">25%</div>
+                  <div class="absolute top-2 right-2 -translate-x-1/2">
+                    <button type="button" data-toggle-post-info>
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </button>
+                    <div
+                      class="absolute top-6 left-2 -translate-x-full flex flex-col gap-2 items-start bg-white shadow-lg w-28 max-h-0 overflow-hidden transition-all duration-300"
+                      data-post-info>
+                      <button
+                        class="space-x-2 hover:text-primary-500 transition-all duration-300">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <spans>Edit</spans>
+                      </button>
+                      <button
+                        class="space-x-2 hover:text-primary-500 transition-all duration-300">
+                        <i class="fa-solid fa-trash"></i>
+                        <span>Delete</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="absolute w-4 h-4 right-[10px] bottom-[10px] z-10 -translate-x-1/2">
+                    <label class="transition-all duration-700 cursor-pointer">
+                      <i
+                        class="text-xl text-red-500 transition-all duration-700 fa-regular fa-heart"
+                        data-heart-icon></i>
+                      <input
+                        class="appearance-none"
+                        type="checkbox"
+                        name="heart"
+                        data-heart-input />
+                    </label>
+                  </div>
+                  <img class="cover" src="assest/drug.png" alt="product" />
+                </div>
+                <div class="info">
+                  <span> <i class="fa-solid fa-user icons"></i> Admin</span>
+                  <span>
+                    <i class="fa-regular fa-calendar-days icons"></i> 13/8</span
+                  >
+                  <span>
+                    <i class="fa-solid fa-comment icons"></i> Comments</span
+                  >
+                </div>
+                <div class="description page-content">
+                  <h4 class="description-title">Panadole</h4>
+                  <p class="test">
+                    Panadol Night tablets relieve night time pain helping you
+                    beat pain to sleep soundly. Painful conditions like
+                    headaches and musculoskeletal pain can affect the quality of
+                    your sleep, by making it difficult to sleep
+                  </p>
+                </div>
+              </div>
+
+              <div class="product_card">
+                <div class="product_img">
+                  <div class="discount">25%</div>
+                  <div
+                    class="absolute w-4 h-4 right-[10px] top-[10px] z-10 -translate-x-1/2">
+                    <label
+                      class="transition-all duration-700 cursor-pointer"
+                      for="heart">
+                      <i
+                        class="text-xl text-red-500 transition-all duration-700 fa-regular fa-heart"
+                        data-heart-icon></i>
+                      <input
+                        class="appearance-none"
+                        type="checkbox"
+                        name="heart"
+                        data-heart-input />
+                    </label>
+                  </div>
+                  <img class="cover" src="assest/drug.png" alt="product" />
+                </div>
+                <div class="info">
+                  <span> <i class="fa-solid fa-user icons"></i> Admin</span>
+                  <span>
+                    <i class="fa-regular fa-calendar-days icons"></i> 13/8</span
+                  >
+                  <span>
+                    <i class="fa-solid fa-comment icons"></i> Comments</span
+                  >
+                </div>
+                <div class="description page-content">
+                  <h4 class="description-title">Panadole</h4>
+                  <p class="test">
+                    Panadol Night tablets relieve night time pain helping you
+                    beat pain to sleep soundly. Painful conditions like
+                    headaches and musculoskeletal pain can affect the quality of
+                    your sleep, by making it difficult to sleep
+                  </p>
+                </div>
+              </div>
+
+              <div class="product_card">
+                <div class="product_img">
+                  <div class="discount">25%</div>
+                  <div
+                    class="absolute w-4 h-4 right-[10px] top-[10px] z-10 -translate-x-1/2">
+                    <label
+                      class="transition-all duration-700 cursor-pointer"
+                      for="heart">
+                      <i
+                        class="text-xl text-red-500 transition-all duration-700 fa-regular fa-heart"
+                        data-heart-icon></i>
+                      <input
+                        class="appearance-none"
+                        type="checkbox"
+                        name="heart"
+                        data-heart-input />
+                    </label>
+                  </div>
+                  <img class="cover" src="assest/drug.png" alt="product" />
+                </div>
+                <div class="info">
+                  <span> <i class="fa-solid fa-user icons"></i> Admin</span>
+                  <span>
+                    <i class="fa-regular fa-calendar-days icons"></i> 13/8</span
+                  >
+                  <span>
+                    <i class="fa-solid fa-comment icons"></i> Comments</span
+                  >
+                </div>
+                <div class="description page-content">
+                  <h4 class="description-title">Panadole</h4>
+                  <p class="test">
+                    Panadol Night tablets relieve night time pain helping you
+                    beat pain to sleep soundly. Painful conditions like
+                    headaches and musculoskeletal pain can affect the quality of
+                    your sleep, by making it difficult to sleep
+                  </p>
+                </div>
+              </div>
+
+              <div class="product_card">
+                <div class="product_img">
+                  <div class="discount">25%</div>
+                  <div
+                    class="absolute w-4 h-4 right-[10px] top-[10px] z-10 -translate-x-1/2">
+                    <label
+                      class="transition-all duration-700 cursor-pointer"
+                      for="heart">
+                      <i
+                        class="text-xl text-red-500 transition-all duration-700 fa-regular fa-heart"
+                        data-heart-icon></i>
+                      <input
+                        class="appearance-none"
+                        type="checkbox"
+                        name="heart"
+                        data-heart-input />
+                    </label>
+                  </div>
+                  <img class="cover" src="assest/drug.png" alt="product" />
+                </div>
+                <div class="info">
+                  <span> <i class="fa-solid fa-user icons"></i> Admin</span>
+                  <span>
+                    <i class="fa-regular fa-calendar-days icons"></i> 13/8</span
+                  >
+                  <span>
+                    <i class="fa-solid fa-comment icons"></i> Comments</span
+                  >
+                </div>
+                <div class="description page-content">
+                  <h4 class="description-title">Panadole</h4>
+                  <p class="test">
+                    Panadol Night tablets relieve night time pain helping you
+                    beat pain to sleep soundly. Painful conditions like
+                    headaches and musculoskeletal pain can affect the quality of
+                    your sleep, by making it difficult to sleep
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- end all product -->
+          </div>
+          <div class="viewmore">
+            <button class="rbtn">View More</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer
+      class="bg-primary-500 min-h-[160px] flex justify-center items-center">
+      <!-- Start Footer Container -->
+      <div
+        class="container grid items-start justify-center grid-cols-1 gap-8 px-4 py-4 mx-auto md:p-0 md:grid-cols-3">
+        <!-- Start Logo -->
+        <a class="self-center" href="index.html">
+          <div
+            class="text-lg font-black text-center text-white capitalize md:text-left logo md:text-2xl lg:text-3xl">
+            Wasteless Drugs
+          </div>
+        </a>
+        <!-- End Logo -->
+        <!-- Start Pages -->
+        <div
+          class="max-w-sm py-4 mx-auto text-center text-white pages md:text-left">
+          <h4 class="pb-2 text-2xl font-bold border-b">Pages</h4>
+          <ul class="my-2 space-y-4">
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="index.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="#"
+                >Categories</a
+              >
+            </li>
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="#"
+                >My Wish List</a
+              >
+            </li>
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="./contact-us.html"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="about-us.html"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- End Pages -->
+        <!-- Start Categories -->
+        <div
+          class="max-w-sm py-4 mx-auto text-center text-white Categories md:text-left">
+          <h4 class="pb-2 text-2xl font-bold border-b">Categories</h4>
+          <ul class="my-2 space-y-4">
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="#"
+                >Tables</a
+              >
+            </li>
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="#"
+                >Drink</a
+              >
+            </li>
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="#"
+                >Cream</a
+              >
+            </li>
+            <li>
+              <a
+                class="block relative overflow-hidden py-1 before:w-full before:h-0.5 before:absolute before:-bottom-0 before:-left-full hover:before:left-0 before:bg-white before:transition-all before:duration-300"
+                href="#"
+                >Injection</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- End Categories -->
+      </div>
+      <!-- End Footer Container -->
+    </footer>
+    <!-- Start Footer -->
+    <!-- End Footer -->
+    <!-- Font Awesome -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+      integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+  </body>
+</html>

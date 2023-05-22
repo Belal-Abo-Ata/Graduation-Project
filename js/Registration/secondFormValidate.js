@@ -1,9 +1,10 @@
 // Import
-import { phoneValidate, messageValidate, printMessage } from '../validtion.js';
+import { phoneValidate, printMessage } from '../validtion.js';
 
 // Selecting Elements
 const phone = document.querySelector(`[data-phone]`);
 const birthDate = document.querySelector(`[data-date]`);
+const pharmacyName = document.querySelector(`[data-pharmacy-name]`);
 const address = document.querySelector(`[data-address]`);
 
 // Functions
@@ -11,8 +12,9 @@ const address = document.querySelector(`[data-address]`);
 function secondFormValidate() {
   const phoneValid = phoneValidate(phone);
   const birthDateValid = birthDateValidate(birthDate);
-  const addressValid = messageValidate(address);
-  const formValid = phoneValid && birthDateValid && addressValid;
+  const addressValid = messageValidate(address, 'address');
+  const nameValid = messageValidate(pharmacyName, 'name');
+  const formValid = phoneValid && birthDateValid && addressValid && nameValid;
   if (formValid) return formValid;
 }
 
@@ -26,3 +28,14 @@ function birthDateValidate() {
   return valid;
 }
 export default secondFormValidate;
+
+function messageValidate(message, validName) {
+  const value = message.value;
+  const valid = value.length > 0;
+  if (!valid) {
+    printMessage(message, 'failed', `Please Enter a Valid ${validName}`);
+  } else {
+    printMessage(message, 'success');
+  }
+  return valid;
+}
