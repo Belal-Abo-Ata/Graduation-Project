@@ -1,0 +1,83 @@
+.admins-title {
+  margin-top: 15px;
+  background-color: #0257a9;
+  border-radius: 25px 25px 0 0;
+  width: 90%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 6px solid#fff;
+  margin-left: 70px;
+}
+.admins-title h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  border-radius: 50px;
+  font-weight: 550;
+  padding: 10px;
+  color: #0257a9;
+  background-color: #fff;
+  border: 1px solid black;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+  }
+  
+  .grid-container > div {
+    background-color: #9fc7ed;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    width: 600px;
+    height: 250px;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .btn{
+    width: 100px;
+    border-radius: 50px;
+    font-size: 15px;
+    border: 1px solid black;
+    background-color: bisque;
+  }
+  .grid-container > div .spen span{
+    border: 1px solid rgb(1, 1, 1);
+   font-size: 25px;
+    background-color: rgb(243, 122, 231);
+    border-radius: 5%;
+    
+  
+  }
+  @media (max-width:767px){
+    .admins-title {
+      width: 280px;
+      display: flex;
+      
+    }
+    
+    .grid-container{
+        grid-template-columns: auto;
+
+    }
+    .grid-container > div{
+        width: 250px;
+        height: 250px;
+        
+    }
+    .grid-container > div .spen span{
+      width: 130px;
+      height: 150px;
+      
+    }
+
+}
